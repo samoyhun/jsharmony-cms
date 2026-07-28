@@ -64,6 +64,7 @@ function jsHarmonyCMS(name, options){
 
   _this.SFTPServer = null;
   _this.PreviewServer = null;
+  _this.MCPServer = null;
 
   _this.funcs = new funcs(_this);
   _this.transform = new jsHarmonyCMSTransform(_this);
@@ -149,6 +150,14 @@ jsHarmonyCMS.prototype.Init = function(cb){
         var jsHarmonyCMSPreviewServer = require('./jsHarmonyCMSPreviewServer.js');
         _this.PreviewServer = new jsHarmonyCMSPreviewServer(_this);
         _this.PreviewServer.Run(ready_cb);
+      },
+
+      //Start MCP Server
+      function(ready_cb){
+        if(!_this.Config.mcp || !_this.Config.mcp.enabled) return ready_cb();
+        var jsHarmonyCMSMCPServer = require('./jsHarmonyCMSMCPServer.js');
+        _this.MCPServer = new jsHarmonyCMSMCPServer(_this);
+        _this.MCPServer.Run(ready_cb);
       },
     ], function(err){
       if (err) { jsh.Log.error(err); }

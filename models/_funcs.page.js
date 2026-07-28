@@ -58,7 +58,7 @@ module.exports = exports = function(module, funcs){
         if(!template) return cb(new Error('Invalid page template "'+page_template_id+'" in page '+page.page_path));
 
         //Load Page Content from disk
-        module.jsh.ParseJSON(funcs.getPageFile(page_file_id), module.name, 'Page File ID#'+page_file_id, function(err, page_file){
+        module.jsh.ParseJSON(funcs.getPageFile(page_file_id), module.name, 'Page File ID#'+page_file_id, function(err, page_file){ // xxxx hs use this to get page data
           if(err && !HelperFS.fileNotFound(err)) return cb(err);
         
           //Template options

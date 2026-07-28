@@ -25,18 +25,24 @@
     "mocha": "^8.4.0"
   },
   "dependencies": {
-    "async": "^2.6.2",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "async": "^2.6.4",
+    "crypto": "^1.0.1",
     "diff-match-patch": "^1.0.4",
     "diff2html": "3.4.1",
     "ejs": "2.7.4",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
     "js-beautify": "^1.11.0",
     "jsharmony": "^1.41.1",
     "jsharmony-factory": "^1.21.8",
-    "lodash": "^4.17.19",
+    "lodash": "^4.18.1",
     "node-forge": "^0.10.0",
     "parse5": "^6.0.1",
     "ssh2-classic": "0.8.16",
     "yauzl": "^2.10.0",
-    "yazl": "^2.5.1"
+    "yazl": "^2.5.1",
+    "zod": "^4.4.3"
   }
 }

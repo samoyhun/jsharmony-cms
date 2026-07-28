@@ -56,6 +56,11 @@ function jsHarmonyCMSConfig(){
     serverHttpsCert: undefined, // path/to/https-cert.pem
     serverHttpsCa: undefined,   // path/to/https-ca.pem
   };
+  
+  this.mcp = {
+    enabled: false,
+    serverPort: 8089,
+  };
 
   this.media_thumbnails = {  //Media thumbnail configuration.  See site_config.json for options
     file_tile: { resize: [150, 150], format: 'jpg' },
